@@ -12,18 +12,7 @@ import org.junit.Test
  * @author sivasankaramalan
  * Created On 19/08/23
  */
-class E2ETest {
+class E2ETestScrap {
 
-    @get:Rule
-    val composeTestRule = createComposeRule()
 
-    @Test
-    fun testPurchaseFlow() {
-        val loginScreen = LoginScreen(composeTestRule)
-
-        composeTestRule.setContent {
-            loginScreen.performLogin()
-
-        }
-    }
 }

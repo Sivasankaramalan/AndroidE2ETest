@@ -11,5 +11,16 @@ import androidx.compose.ui.test.performClick
  */
 class ShowcaseScreen(private val  composeTestRule: ComposeTestRule) {
 
+    fun openItem(itemName: String) {
+        composeTestRule.onNodeWithText(itemName).performClick()
+    }
+
+    fun addItemToCart() {
+        composeTestRule.onNodeWithText("Add to Cart").performClick()
+    }
+
+    fun navigateBack() {
+        composeTestRule.onNodeWithContentDescription("Navigate Up").performClick()
+    }
 
 }
