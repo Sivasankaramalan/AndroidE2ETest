@@ -1,4 +1,4 @@
-package com.mercari.instrumentTest
+package com.mercari.instrumentTest.screens
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

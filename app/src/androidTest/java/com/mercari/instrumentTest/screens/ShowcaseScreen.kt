@@ -1,4 +1,4 @@
-package com.mercari.instrumentTest
+package com.mercari.instrumentTest.screens
 
 import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.compose.ui.test.onNodeWithContentDescription
