@@ -1,6 +1,7 @@
 package com.mercari.instrumentTest.e2e
 
 import androidx.compose.ui.test.junit4.createComposeRule
+import com.mercari.instrumentTest.helpers.AssertionsHelper
 import com.mercari.instrumentTest.screens.*
 import com.mercari.instrumentTest.testdata.TestData
 import com.mercari.instrumentTest.utilities.TestDataLoader
@@ -17,6 +18,7 @@ class E2ETest {
     val composeTestRule = createComposeRule()
 
     private val testData = TestDataLoader
+
 
     @Test
     fun testLoginFlow() {
