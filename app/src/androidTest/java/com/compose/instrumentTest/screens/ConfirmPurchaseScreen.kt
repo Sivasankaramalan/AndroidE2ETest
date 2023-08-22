@@ -21,25 +21,30 @@ class ConfirmPurchaseScreen(private val composeTestRule: ComposeTestRule) : Base
     private val orderMessage = composeTestRule.onNodeWithContentDescription("Thank you for your order!")
     private val backHome = composeTestRule.onNodeWithContentDescription("Back Home")
 
-    fun verifyUserIsInAddressScreen(expectedScreen: String, expectedToolbarTitle: String) {
+    // This function is used to verify if the user is in the Confirm Purchase screen
+    fun verifyUserIsInConfirmPurchaseScreen(expectedScreen: String, expectedToolbarTitle: String) {
         verifyCurrentScreen(expectedScreen, expectedToolbarTitle)
     }
 
+    // This function is used to verify the details in the Confirm Purchase screen
     fun verifyConfirmPurchasePageDetails() {
         paymentInformation.assertIsDisplayed()
         shippingInformation.assertIsDisplayed()
     }
 
+    // This function is used to click on the Finish button
     fun clickFinishButton() {
         finishButton.assertIsEnabled()
         finishButton.performClick()
     }
 
+    // This function is used to verify the order confirmation message
     fun confirmPurchase() {
         orderMessage.assertIsDisplayed()
         backHome.assertIsDisplayed()
     }
 
+    // This function is used to navigate to the Home screen
     fun navigateToHome() {
         backHome.performClick()
     }

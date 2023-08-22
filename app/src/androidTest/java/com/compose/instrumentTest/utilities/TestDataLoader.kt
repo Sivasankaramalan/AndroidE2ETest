@@ -2,9 +2,13 @@ package com.compose.instrumentTest.utilities
 
 import java.util.*
 
-/**
+/*
  * @author sivasankaramalan
  * Created On 20/08/23
+ */
+
+/**
+ * This is the data loader class which loads the test data from the properties file
  */
 object TestDataLoader {
 

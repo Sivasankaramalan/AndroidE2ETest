@@ -16,11 +16,13 @@ import com.compose.instrumentTest.objects.AddressScreenLocators
 class AddressScreen(private val composeTestRule: ComposeTestRule) : BasePage(composeTestRule) {
 
 
+    // This function is used to verify if the user is in the Address screen
     fun verifyUserIsInAddressScreen() {
         composeTestRule.onNodeWithContentDescription("Navigate to Address Screen").performClick()
         verifyCurrentScreen("Address Screen", "Address")
     }
 
+    // This function is used to verify the details in the Address screen
     fun verifyAddressPageDetails() {
         with(AddressScreenLocators) {
             composeTestRule.onNodeWithText(firstName).assertExists()
@@ -31,6 +33,7 @@ class AddressScreen(private val composeTestRule: ComposeTestRule) : BasePage(com
         }
     }
 
+    // This function is used to enter the details in the Address screen
     fun completeAddress(firstNameInput: String, lastNameInput: String, cityInput: String, zipCodeInput: String) {
         with(AddressScreenLocators) {
             composeTestRule.onNodeWithText(firstName).assertIsEnabled()
@@ -41,6 +44,7 @@ class AddressScreen(private val composeTestRule: ComposeTestRule) : BasePage(com
         }
     }
 
+    // This function is used to click on the Continue button
     fun clickContinueButton() {
         with(AddressScreenLocators) {
             composeTestRule.onNodeWithText(continueButton).assertIsEnabled()

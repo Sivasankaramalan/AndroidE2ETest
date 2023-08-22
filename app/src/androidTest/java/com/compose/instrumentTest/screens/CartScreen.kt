@@ -21,28 +21,31 @@ class CartScreen(private val composeTestRule: ComposeTestRule) : BasePage(compos
     private val checkout = composeTestRule.onNodeWithText("Proceed to Checkout")
 
 
-    fun verifyUserIsInAddressScreen(expectedScreen: String, expectedToolbarTitle: String) {
+    // This function is used to verify the user is in the Cart Screen
+    fun verifyUserIsInCartScreen(expectedScreen: String, expectedToolbarTitle: String) {
         verifyCurrentScreen(expectedScreen, expectedToolbarTitle)
     }
 
+    // This function is used to navigate to the Cart Screen
     fun navigateToCart() {
         cartIcon.performClick()
     }
 
+    // This function is used to verify the item count in the Cart
     fun verifyItemCountInCart(cartItem: String) {
         cartIcon.assertIsDisplayed()
         cartIcon.assertTextEquals(cartItem)
     }
 
+    // This function is used to verify the items in the Cart Screen
     fun verifyItemsInCart(firstItemName: String, secondItemName: String) {
         firstItem.assertIsDisplayed()
         secondItem.assertIsDisplayed()
         firstItem.assertTextEquals(firstItemName)
         secondItem.assertTextEquals(secondItemName)
-
-
     }
 
+    // This function is used to start the purchase flow
     fun startPurchase() {
         checkout.assertIsDisplayed()
         checkout.performClick()

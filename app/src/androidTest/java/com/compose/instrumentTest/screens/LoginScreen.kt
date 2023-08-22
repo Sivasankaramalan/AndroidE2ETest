@@ -14,7 +14,7 @@ import com.compose.instrumentTest.helpers.AssertionsHelper
 
 /** This class is used to perform actions on the Login Screen */
 
-class LoginScreen(composeTestRule: ComposeTestRule) : BasePage(composeTestRule){
+class LoginScreen(composeTestRule: ComposeTestRule) : BasePage(composeTestRule) {
 
     private val assertionsHelper = AssertionsHelper(composeTestRule)
 
@@ -22,25 +22,31 @@ class LoginScreen(composeTestRule: ComposeTestRule) : BasePage(composeTestRule){
     private val passwordField = composeTestRule.onNodeWithContentDescription("Password")
     private val loginButton = composeTestRule.onNodeWithContentDescription("Login Button")
 
-    fun verifyUserIsInAddressScreen(expectedScreen: String, expectedToolbarTitle: String) {
+
+    // This method is used to verify the user is in the Login Screen
+    fun verifyUserIsInLoginScreen(expectedScreen: String, expectedToolbarTitle: String) {
         verifyCurrentScreen(expectedScreen, expectedToolbarTitle)
     }
 
+    // This method is used to enter the username
     private fun enterUsername(username: String) {
         assertionsHelper.assertIsDisplayed(usernameField)
         usernameField.performTextInput(username)
     }
 
+    // This method is used to enter the password
     private fun enterPassword(password: String) {
         assertionsHelper.assertIsDisplayed(passwordField)
         passwordField.performTextInput(password)
     }
 
+    // This method is used to click on the Login button
     private fun clickLoginButton() {
         assertionsHelper.assertIsDisplayed(passwordField)
         loginButton.performClick()
     }
 
+    // This method is used to perform the login action
     fun performLogin(username: String, password: String) {
         enterUsername(username)
         enterPassword(password)
