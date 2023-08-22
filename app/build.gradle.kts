@@ -35,14 +35,14 @@ android {
 dependencies {
 
     // Needed for JUnit tests
-    testImplementation ("junit:junit:4.13.2")
+    testImplementation("junit:junit:4.13.2")
 
     // Needed for Android instrumentation tests
-    androidTestImplementation ("androidx.test:runner:1.5.2")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // Needed for Compose UI tests
-    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.5.0")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.0")
 
     // Other Android dependencies
     implementation("androidx.core:core-ktx:1.10.1")
@@ -51,6 +51,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-
 }
