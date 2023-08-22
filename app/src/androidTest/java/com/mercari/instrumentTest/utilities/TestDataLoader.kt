@@ -21,4 +21,28 @@ object TestDataLoader {
     val password: String
         get() = properties.getProperty("password")
 
+    val homePageTitle: String
+        get() = properties.getProperty("home_page_title")
+
+    val firstItem: String
+        get() = properties.getProperty("firstItem")
+
+    val secondItem: String
+        get() = properties.getProperty("secondItem")
+
+    val ItemsInCart: String
+        get() = properties.getProperty("cartItem")
+
+    val firstName: String
+        get() = properties.getProperty("firstName")
+
+    val lastName: String
+        get() = properties.getProperty("lastName")
+
+    val city: String
+        get() = properties.getProperty("city")
+
+    val zipCode: String
+        get() = properties.getProperty("zipCode")
+
 }
