@@ -1,9 +1,9 @@
-package com.mercari.instrumentTest.screens
+package com.compose.instrumentTest.screens
 
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.ComposeTestRule
-import com.mercari.instrumentTest.e2e.BasePage
-import com.mercari.instrumentTest.objects.AddressScreenLocators
+import com.compose.instrumentTest.e2e.BasePage
+import com.compose.instrumentTest.objects.AddressScreenLocators
 
 /*
  * @author sivasankaramalan

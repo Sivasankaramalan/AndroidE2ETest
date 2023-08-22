@@ -1,11 +1,11 @@
-package com.mercari.instrumentTest.screens
+package com.compose.instrumentTest.screens
 
 import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
-import com.mercari.instrumentTest.e2e.BasePage
-import com.mercari.instrumentTest.helpers.AssertionsHelper
+import com.compose.instrumentTest.e2e.BasePage
+import com.compose.instrumentTest.helpers.AssertionsHelper
 
 /*
  * @author sivasankaramalan

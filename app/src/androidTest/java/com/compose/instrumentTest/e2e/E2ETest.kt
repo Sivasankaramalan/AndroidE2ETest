@@ -1,10 +1,9 @@
-package com.mercari.instrumentTest.e2e
+package com.compose.instrumentTest.e2e
 
-import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
-import com.mercari.instrumentTest.screens.*
-import com.mercari.instrumentTest.utilities.TestDataLoader
+import com.compose.instrumentTest.screens.*
+import com.compose.instrumentTest.utilities.TestDataLoader
 import org.junit.Assert
 import org.junit.Before
 import org.junit.BeforeClass

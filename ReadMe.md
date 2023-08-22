@@ -6,7 +6,7 @@ Project File Structure
     - src
         - androidTest
             - java
-                - com.mercari.instrumentTest
+                - com.compose.instrumentTest
                     - e2e
                         - BasePage.kt
                         - E2ETest.kt

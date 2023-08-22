@@ -1,4 +1,4 @@
-package com.mercari.instrumentTest.testdata
+package com.compose.instrumentTest.testdata
 
 /**
  * @author sivasankaramalan

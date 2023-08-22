@@ -1,4 +1,4 @@
-package com.mercari.instrumentTest.utilities
+package com.compose.instrumentTest.utilities
 
 import java.util.*
 

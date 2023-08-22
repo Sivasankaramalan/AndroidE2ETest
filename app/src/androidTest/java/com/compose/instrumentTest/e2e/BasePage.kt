@@ -1,8 +1,7 @@
-package com.mercari.instrumentTest.e2e
+package com.compose.instrumentTest.e2e
 
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.ComposeTestRule
-import kotlinx.coroutines.delay
 
 /*
  * @author sivasankaramalan

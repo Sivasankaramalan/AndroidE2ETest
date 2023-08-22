@@ -1,4 +1,4 @@
-package com.mercari.instrumentTest.helpers
+package com.compose.instrumentTest.helpers
 
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.ComposeTestRule
