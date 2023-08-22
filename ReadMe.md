@@ -30,7 +30,7 @@ Project File Structure
 Project File Structure Description
 ---------------
 
-The project is structured in a way that it is easy to maintain and extend. 
+The project is structured in a way that it is easy to maintain and scale. 
 The file structure is as follows:
 
     1. e2e - Contains all the test classes
