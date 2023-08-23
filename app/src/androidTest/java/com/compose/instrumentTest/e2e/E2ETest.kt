@@ -1,7 +1,11 @@
 package com.compose.instrumentTest.e2e
 
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onRoot
+import androidx.test.espresso.Root
 import androidx.test.platform.app.InstrumentationRegistry
+import com.compose.instrumentTest.helpers.saveScreenshot
 import com.compose.instrumentTest.screens.*
 import com.compose.instrumentTest.utilities.TestDataLoader
 import org.junit.Assert
@@ -39,6 +43,7 @@ class E2ETest {
     private val currentScreenName = base.getCurrentScreenName(composeTestRule)
     private val pageHeader = base.getCurrentPageHeader()
     private val timeOut: Long = 10000
+    private val retryInterval: Long = 1000
 
     // Context of the app under test.
     private fun useAppContext() {
@@ -59,7 +64,8 @@ class E2ETest {
     @BeforeClass
     fun verifyPageProperties() {
         base.verifyCurrentScreen(currentScreenName, pageHeader)
-        base.verifyScreenLoaded(currentScreenName, timeOut)
+        base.verifyScreenLoaded(composeTestRule, currentScreenName, timeOut, retryInterval)
+        saveScreenshot("ScreenName", node = composeTestRule.onRoot())
     }
 
 
