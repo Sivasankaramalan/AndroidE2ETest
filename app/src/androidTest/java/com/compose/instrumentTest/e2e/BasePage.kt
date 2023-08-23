@@ -74,5 +74,4 @@ open class BasePage(private val composeTestRule: ComposeTestRule) {
     fun getCurrentPageHeader(): String {
         return composeTestRule.onNodeWithContentDescription("Header").toString()
     }
-
 }
