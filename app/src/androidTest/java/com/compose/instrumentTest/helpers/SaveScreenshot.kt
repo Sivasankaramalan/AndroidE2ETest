@@ -7,11 +7,14 @@ import androidx.compose.ui.test.captureToImage
 import androidx.test.platform.app.InstrumentationRegistry
 import java.io.FileOutputStream
 
-/**
+/*
  * @author sivasankaramalan
  * Created On 23/08/23
  */
 
+/**
+ * This class contains the utility functions to save the screenshots
+ **/
 fun saveScreenshot(
     fileNamePrefix: String,
     node: SemanticsNodeInteraction
