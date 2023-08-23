@@ -1,5 +1,6 @@
 package com.compose.instrumentTest.e2e
 
+import android.util.Log
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.ComposeTestRule
 
@@ -26,29 +27,34 @@ open class BasePage(private val composeTestRule: ComposeTestRule) {
 
         composeTestRule.onNodeWithText(expectedToolbarTitle).assertExists()
 
-        println("User is in: $expectedScreen")
+        Log.d("ScreenVerification", "User is in: $expectedScreen")
     }
 
     /**
      * This method is used to verify if a screen is loaded or not.
      */
-    internal fun verifyScreenLoaded(expectedScreenName: String, timeoutMillis: Long = 10000) {
-        var elapsedTime = 0
-        val retryIntervalMillis = 500
+    internal fun verifyScreenLoaded(
+        composeTestRule: ComposeTestRule,
+        expectedScreenName: String,
+        timeoutMillis: Long,
+        retryIntervalMillis: Long
+    ) {
+        val startTime = System.currentTimeMillis()
+        var elapsedTime = 0L
 
         while (elapsedTime < timeoutMillis) {
             try {
                 composeTestRule.onNodeWithContentDescription(expectedScreenName)
                 composeTestRule.onNodeWithText(expectedScreenName)
 
-                println("Navigated to: $expectedScreenName")
+                Log.d("ScreenVerification", "Navigated to: $expectedScreenName")
                 return
             } catch (e: Exception) {
-                elapsedTime += retryIntervalMillis
+                elapsedTime = System.currentTimeMillis() - startTime
+                Thread.sleep(retryIntervalMillis)
             }
         }
-
-        error("Timed out waiting for $expectedScreenName to load")
+        Log.e("ScreenVerification", "Failed to navigate to: $expectedScreenName within timeout")
     }
 
     /**
